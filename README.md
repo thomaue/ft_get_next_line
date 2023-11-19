@@ -14,7 +14,8 @@ L'objectif principal de ce projet est de vous familiariser avec la gestion des d
    git clone https://github.com/thomaue/get_next_line.git
 
 2. **Incluez le fichier d'en-tête get_next_line.h dans vos fichiers source** :
-
+3. 
+   ```bash
     #include "get_next_line.h"
 
 4. **Appelez la fonction get_next_line pour lire une ligne à chaque appel.**
@@ -37,7 +38,8 @@ int main(void)
 }
 ```
 4. **Compilez votre programme avec la fonction get_next_line** :
-   
+
+   ```bash
    gcc -o mon_programme mes_sources.c get_next_line/*.c -D BUFFER_SIZE=32
 
 
