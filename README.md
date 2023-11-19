@@ -36,6 +36,8 @@ int main(void)
     return (0);
 }
 ```
-4. **gcc -o mon_programme mes_sources.c get_next_line/*.c -D BUFFER_SIZE=32**
+4. **Compilez votre programme avec la fonction get_next_line** :
+   
+   gcc -o mon_programme mes_sources.c get_next_line/*.c -D BUFFER_SIZE=32
 
 
