@@ -8,17 +8,17 @@ L'objectif principal de ce projet est de vous familiariser avec la gestion des d
 
 ## Utilisation
 
-1. ** Clonez le repository dans votre projet  ** :
+1. **Clonez le repository dans votre projet** :
 
    ```bash
    git clone https://github.com/thomaue/get_next_line.git
 
-2. ** Incluez le fichier d'en-tête get_next_line.h dans vos fichiers source ** :
+2. **Incluez le fichier d'en-tête get_next_line.h dans vos fichiers source** :
    #include "get_next_line.h"
 
-3. ** Appelez la fonction get_next_line pour lire une ligne à chaque appel. **
+3. **Appelez la fonction get_next_line pour lire une ligne à chaque appel.**
 
-   ```c
+```c
    int main(void)
 {
     int fd;
