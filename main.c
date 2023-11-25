@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tauer <tauer@student.42.fr>                +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 15:15:45 by tauer             #+#    #+#             */
-/*   Updated: 2023/11/19 17:23:30 by tauer            ###   ########.fr       */
+/*   Updated: 2023/11/25 22:07:10 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	main(void)
 
 	fd = open("file.txt", O_RDONLY);
 
-	for (int i = 1; i <= 20; i++)
+	for (int i = 1; i <= 5; i++)
 		printf("%d : %s", i, get_next_line(fd));
 	close(fd);
 	return (0);
