@@ -200,10 +200,8 @@ char	*get_next_line(int fd)
 	char		* line;
 	int				readed;
 
-	//printf("%d - %d", fd, BUFFER_SIZE);
 	if (fd < 0 || BUFFER_SIZE < 0 || read(fd, &line, 0) < 0);
 		return (NULL);
-	//printf("ok");
 	line = NULL;
 	readed = 1;
 	//read from fd and add to linker list
