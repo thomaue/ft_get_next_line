@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 15:15:45 by tauer             #+#    #+#             */
-/*   Updated: 2023/11/25 22:07:10 by marvin           ###   ########.fr       */
+/*   Updated: 2023/11/27 23:58:04 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,18 @@
 int	main(void)
 {
 	int	fd;
-
+	char *line;
+	
 	fd = open("file.txt", O_RDONLY);
 
-	for (int i = 1; i <= 5; i++)
-		printf("%d : %s", i, get_next_line(fd));
+	while(1)
+	{
+		line = get_next_line(fd);
+		if (line == NULL)
+			break;
+		printf("%s", line);
+		free(line);
+	}
 	close(fd);
 	return (0);
 }

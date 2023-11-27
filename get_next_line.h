@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tauer <tauer@student.42.fr>                +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 11:55:06 by tauer             #+#    #+#             */
-/*   Updated: 2023/11/17 13:31:25 by tauer            ###   ########.fr       */
+/*   Updated: 2023/11/27 22:45:59 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,12 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct t_list
+{
+	char			*content;
+	struct t_list	*next;
+}			t_list;
 
 char	*get_next_line(int fd);
 
