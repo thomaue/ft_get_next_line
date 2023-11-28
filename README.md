@@ -21,20 +21,21 @@ L'objectif principal de ce projet est de vous familiariser avec la gestion des d
 3. **Appelez la fonction get_next_line pour lire une ligne à chaque appel.**
 
 ```c
-int main(void)
+int	main(void)
 {
-    int fd;
-    char *line;
+	int	fd;
+	char *line;
+	
+	fd = open("file.txt", O_RDONLY);
 
-    fd = open("votre_fichier.txt", O_RDONLY);
-    while (get_next_line(fd, &line) > 0)
-    {
-        // Traitement de la ligne
-        printf("%s\n", line);
-        free(line);
-    }
-    close(fd);
-    return (0);
+	for(int i = 1; i <= 20; i++)
+	{
+		line = get_next_line(fd);
+		printf("%d - %s",i, line);
+		free(line);
+	}
+	close(fd);
+	return (0);
 }
 ```
 4. **Compilez votre programme avec la fonction get_next_line** :
