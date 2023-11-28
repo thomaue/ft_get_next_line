@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 15:15:45 by tauer             #+#    #+#             */
-/*   Updated: 2023/11/27 23:58:04 by marvin           ###   ########.fr       */
+/*   Updated: 2023/11/28 11:36:10 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,10 @@ int	main(void)
 	
 	fd = open("file.txt", O_RDONLY);
 
-	while(1)
+	for(int i = 1; i <= 20; i++)
 	{
 		line = get_next_line(fd);
-		if (line == NULL)
-			break;
-		printf("%s", line);
+		printf("%d - %s",i, line);
 		free(line);
 	}
 	close(fd);
