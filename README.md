@@ -39,9 +39,8 @@ int	main(void)
 	return (0);
 }
 ```
-4. **Compilez votre programme avec la fonction get_next_line** :
-
+4. **Compilez votre programme avec la fonction get_next_line** : 
+   
    ```bash
-   gcc -o mon_programme mes_sources.c get_next_line/*.c -D BUFFER_SIZE=32
-
+   cc -Wall -Wextra -Werror main.c get_next_line.c get_next_line_utils.c -D BUFFER_SIZE=1 -o gnl && ./gnl
 
