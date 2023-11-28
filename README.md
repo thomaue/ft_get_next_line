@@ -26,7 +26,7 @@ int	main(void)
 	int	fd;
 	char *line;
 
-	//ici changer le nom du fichier a votre guise
+	//ici changer le open a votre guise
 	fd = open("file.txt", O_RDONLY);
 
 	for(int i = 1; i <= 20; i++)
