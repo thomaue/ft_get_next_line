@@ -6,26 +6,27 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 11:55:06 by tauer             #+#    #+#             */
-/*   Updated: 2023/11/28 13:03:19 by marvin           ###   ########.fr       */
+/*   Updated: 2023/11/28 13:51:09 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_GET_NEXT_LINE
 # define FT_GET_NEXT_LINE
 
+# include <stdio.h>
+# include <stdlib.h>
+# include <fcntl.h>
+# include <unistd.h>
+
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 10
 # endif
 
-# include <fcntl.h>
-# include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
 
-typedef struct t_list
+typedef struct s_list
 {
 	char			*content;
-	struct t_list	*next;
+	struct s_list	*next;
 }			t_list;
 
 t_list *ft_lst_get_last(t_list *stash);

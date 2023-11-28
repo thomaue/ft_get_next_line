@@ -34,7 +34,7 @@ int	find_newline(t_list *stash)
 	while (current->content[i])
 	{
 		if (current->content[i] == '\n')
-			return (i);
+			return (1);
 		i++;
 	}
 	return (0);
@@ -75,7 +75,7 @@ void	read_and_stash(t_list **stash, int *readed_ptr, int fd)
 
 	while (!find_newline(*stash) && *readed_ptr != 0)
 	{
-		buff = malloc(sizeof(char)* (BUFFER_SIZE + 1));
+		buff = malloc(sizeof(char) * (BUFFER_SIZE + 1));
 		if (buff == NULL)
 			return ;
 		*readed_ptr = (int)read(fd, buff, BUFFER_SIZE);
