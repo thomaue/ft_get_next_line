@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 15:15:45 by tauer             #+#    #+#             */
-/*   Updated: 2023/11/28 11:36:10 by marvin           ###   ########.fr       */
+/*   Updated: 2023/12/01 10:30:32 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	main(void)
 	int	fd;
 	char *line;
 	
-	fd = open("file.txt", O_RDONLY);
+	fd = open("text.txt", O_RDONLY);
 
 	for(int i = 1; i <= 20; i++)
 	{

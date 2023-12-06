@@ -14,20 +14,19 @@
 
 void	extract_line(t_list *stash, char **line)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	if (stash == NULL)
 		return ;
-	
 	generate_line(line, stash);
 	if (*line == NULL)
 		return ;
 	j = 0;
-	while(stash)
+	while (stash)
 	{
 		i = 0;
-		while(stash->content[i])
+		while (stash->content[i])
 		{
 			if (stash->content[i] == '\n')
 			{
